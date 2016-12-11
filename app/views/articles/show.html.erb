@@ -4,3 +4,11 @@
 
 <%= link_to "Back to Articles List",
             articles_path %>
+
+<%= link_to "Edit", edit_article_path(@article)%>
+
+<%= link_to "Delete",
+            article_path(@article),
+            method: :delete,
+            :data => {:confirm => "Are You Sure?"} %> 
+            <%# Curlies needed for JS syntax? %>
